@@ -19,6 +19,9 @@ with open('posts.csv', 'w') as csv_file:
         title = post.find(class_='post-title').get_text().replace('\n', '')
         link = post.find('a')['href']
         date = post.select('.post-meta')[0].get_text()
-        csv_writer.writerow([title, link, date])
+        try:
+            csv_writer.writerow([title, link, date])
+        except Exception as e:
+            print(e)
         
-# print(posts) 
+print('Scrapping Done...') 
