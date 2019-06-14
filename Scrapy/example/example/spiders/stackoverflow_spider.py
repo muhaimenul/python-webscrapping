@@ -13,7 +13,7 @@ class StackOverflowSpider(scrapy.Spider):
 
     def parse(self, response):
         filename = "test.html"
-        print(response.body)
-        # with open(filename, 'wb') as html_file:
-        #     html_file.write(response.body)
+
+        with open(filename, 'wb') as html_file:
+            html_file.write(response.body)
 
