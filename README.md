@@ -1,4 +1,4 @@
-# python-webscrapping
+# Python Webscrapping
 Few approaches for web scraping using Python
 
 ## BeautifulSoup:
