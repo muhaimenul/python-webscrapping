@@ -1,5 +1,5 @@
 # custom made by muhaimenul
-form scrapy.cmdline import execute
+from scrapy.cmdline import execute
 
 try:
     execute(
