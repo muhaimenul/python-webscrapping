@@ -15,5 +15,6 @@ class StackOverflowSpider(scrapy.Spider):
         filename = "test.html"
 
         with open(filename, 'wb') as html_file:
+            questions = response.xpath('//*[@class="grid--cell fl1 fs-body3 mr12"]/text()').get()
             html_file.write(response.body)
 
