@@ -14,8 +14,8 @@ class StackOverflowSpider(scrapy.Spider):
     def parse(self, response):
         filename = "test.html"
 
-        with open(filename, 'w') as html_file:
+        with open(filename, 'wb') as html_file:
             questions = response.xpath('//*[@class="grid--cell fl1 fs-body3 mr12"]/text()').get().strip()
             questions = questions[:-10]
-            html_file.write(questions)
+            html_file.write(questions.encode())
 
